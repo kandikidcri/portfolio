@@ -23,6 +23,7 @@ def setRoute(
     alternateRoute = None):
         def requestHandler(file): 
             return open(file, 'r').read()
+
         noFileErrorMsg = "You must provide the file to link to the route you are trying to set."
         
         if file is None:
@@ -44,8 +45,8 @@ Route URL request from http://cristinarossie.com or http://cristinarossie.com/ma
 to the file contents of main.html. Route requests from http://cristinarossie.com/about to about.html.
 """
 def servePortfolioResources():
-    setRoute("/html/main.html", "/main", "/")
-    setRoute("about.html", "/about")
+    setRoute("html/main.html", "/main", "/")
+    setRoute("html/about.html", "/about")
     app.run()
 
 servePortfolioResources()
